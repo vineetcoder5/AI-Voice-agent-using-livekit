@@ -1,0 +1,163 @@
+{
+  "transcript": {
+    "items": [
+      {
+        "id": "item_adcc118ef3b6",
+        "type": "message",
+        "role": "user",
+        "content": [
+          "Hello?"
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_341d4fcc658c",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          "Hello Jack, my name is Joe, and I'm calling from SBI Bank. I hope you're having a good day.\n\nI'm calling regarding your outstanding bill of $125.0, which was due on May 25, 2025. Our records show it's still open, and today is June 16, 2025.\n\nWe understand that sometimes things can slip through the cracks, and we just wanted to send"
+        ],
+        "interrupted": true
+      },
+      {
+        "id": "item_50ffb2887088",
+        "type": "message",
+        "role": "user",
+        "content": [
+          "Can you repeat can you repeat the new day?"
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_c0d2b5eb939c",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          "Certainly, Jack. The original due date for the bill was May 25, 2025."
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_96ce56d64237",
+        "type": "message",
+        "role": "user",
+        "content": [
+          "So while you don't need me any phone call before the due date, I must have cleared the pending amount."
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_bd313975fc93",
+        "type": "message",
+        "role": "user",
+        "content": [
+          "I know your trick. You call me after my due date and tell me, sir, as you have passed your due date, there is some time you have to pay."
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_8090c1357641",
+        "type": "message",
+        "role": "user",
+        "content": [
+          "This is very dirty tricks."
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_aad2d2c370a5",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          "I understand your frustration, Jack, and I sincerely apologize if our call feels like a trick. That is absolutely not our intention.\n\nWe don't typically call customers before the due date unless there's a specific reason or arrangement. This call is simply a follow-up because our system shows an outstanding balance after the due date. It's just a friendly reminder to help ensure everything is in order with your account.\n\nMy goal here is just to help you resolve this outstanding amount. How would you like to proceed?"
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_7cbb4f5a247f",
+        "type": "message",
+        "role": "user",
+        "content": [
+          "Can you log a complaint for this"
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_d5e7b49c2727",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          "Okay, Jack. I can definitely log a complaint for you regarding your concerns about the timing of this call and how it made you feel.\n\nTo confirm, the reason for the complaint is that you feel the bank used a \"dirty trick\" by calling after the due date instead of before, implying there would be a charge, when you believe you should have been reminded before the due date to avoid this situation. Is that correct?"
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_2e0c98449790",
+        "type": "message",
+        "role": "user",
+        "content": [
+          "Yep. Yeah."
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_f16bc51b3885",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          "Thank you for confirming, Jack. I have logged your complaint regarding the timing of the call and your concerns about the bank's process.\n\nIs there anything else I can help you with today, or would you like to discuss the outstanding bill further?"
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_373a9c117336",
+        "type": "message",
+        "role": "user",
+        "content": [
+          "Can you also remind me after two days to make it payment? Because I am busy right now."
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_3fc1961e267d",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          "Okay, Jack. I can schedule a callback to remind you about the payment in two days. Today is June 16th, so I will schedule the call for June 18th, 2025.\n\nDoes that work for you?"
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_7c53f4b5b8b7",
+        "type": "message",
+        "role": "user",
+        "content": [
+          "Yeah."
+        ],
+        "interrupted": false
+      },
+      {
+        "id": "item_93ba84102b92",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          "Okay, Jack. I have scheduled a callback for you on June 18th, 2025, to remind you about the payment.\n\nIs there anything else I can assist you with today? Otherwise, I"
+        ],
+        "interrupted": true
+      },
+      {
+        "id": "item_fd53ebceef92",
+        "type": "message",
+        "role": "user",
+        "content": [
+          "No."
+        ],
+        "interrupted": false
+      }
+    ]
+  },
+  "custom_log": [
+    "[Complaint] +919437118029: Customer feels tricked by the bank calling after the due date instead of before, implying a charge will be added, and believes they should have been reminded before the due date.",
+    "[Reschedule] +919437118029 requested callback on 2025-06-18"
+  ]
+}

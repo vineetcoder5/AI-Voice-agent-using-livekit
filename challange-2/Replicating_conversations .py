@@ -12,8 +12,6 @@ from self_correct import generate_new_prompt
 from livekit.agents import Agent, AgentSession, function_tool, RunContext
 from livekit.plugins import google
 
-# # Load environment variables from .env.local
-# load_dotenv(dotenv_path=".env.local")
 
 # Configure logging
 logger = logging.getLogger("call-simulation")

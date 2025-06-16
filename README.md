@@ -1,6 +1,6 @@
 # 🚀 Riverline Challenge – Voice Agent Setup
 
-This repository contains the setup and execution steps for **Challenge\_1**, where we deploy a voice agent using LiveKit and Twilio SIP trunking.
+This repository contains the setup and execution steps for **Challenge\_1** and **Challenge\_2**, where we deploy and self-correct a voice agent using LiveKit and Twilio SIP trunking.
 
 ---
 
@@ -109,9 +109,55 @@ Your phone should ring, and the AI voice agent will respond to your input.
 
 ---
 
+## 🔄 Challenge\_2 – Self-Correcting Voice Agents
+
+### 🔧 Step 1: Navigate to the Folder
+
+Navigate to the folder:
+
+```bash
+cd challenge_2
+```
+
+> No environment variables are needed for this folder.
+
+### 📂 Files Overview
+
+* `Replicating_conversations.py`: Simulates a conversation between the outbound agent and the defaulter.
+* `persona.py`: Generates a persona for the defaulter.
+* `validate.py`: Evaluates the conversation based on three conditions:
+
+  * Is the bot repeating itself?
+  * Is the bot negotiating enough?
+  * Is the bot providing irrelevant responses?
+* `self_correct.py`: Refines the outbound caller agent prompt based on validation.
+
+### 📅 Step 2: Run the Simulation
+
+Only one script needs to be executed:
+
+```bash
+python Replicating_conversations.py
+```
+
+> After a successful run, you will get `transcript.json` outside the `challenge_2` folder. This file contains a modified prompt that satisfies the persona requirements in a general way.
+
+### ⚠️ API Key Notes
+
+* If you get an API key error, it's likely due to overload on Gemini API.
+* Do **not** use the same Gemini API key repeatedly.
+* Replace your Gemini API key at the following locations:
+
+  * `Replicating_conversations.py`: Line 105 and 98
+  * `persona.py`: Line 3
+  * `validate.py`: Line 9
+  * `self_correct.py`: Line 7
+
+---
+
 ## ✅ Success
 
-If all steps are configured correctly, your voice agent is live and can interact over the phone. Happy building!
+If all steps are configured correctly, Challenge\_2 will produce improved prompts that self-correct based on conversation quality.
 
 ---
 

@@ -1,7 +1,6 @@
 # 🚀 Riverline Challenge – Voice Agent Setup
 
-This repository contains the setup and execution steps for **Challenge\_1** and **Challenge\_2**, where we deploy and self-correct a voice agent using LiveKit and Twilio SIP trunking.
-
+This repository contains the setup and execution steps for **Challenge\_1** and **Challenge\_2**, 
 ---
 
 ## 📆 Clone the Repository

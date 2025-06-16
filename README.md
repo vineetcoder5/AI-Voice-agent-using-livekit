@@ -139,6 +139,15 @@ Only one script needs to be executed:
 python Replicating_conversations.py
 ```
 
+After you run the code fill the defaulter detail
+
+```bash
+Enter defaulter's name (e.g., Sania Gupta): Defaulter Name
+Enter amount due (e.g., 125.50): Defaulter Amount
+Enter due date (e.g., May 25, 2025): Date of default
+Enter personality traits (e.g., emotional, defensive, anxious): personality traits of the defaulter
+```
+
 > After a successful run, you will get `transcript.json` outside the `challenge_2` folder. This file contains a modified prompt that satisfies the persona requirements in a general way.
 
 ### ⚠️ API Key Notes

@@ -6,7 +6,7 @@ This repository contains the setup and execution steps for **Challenge\_1** and 
 ## 📆 Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/riverline-challenge.git
+git clone https://github.com/vineetcoder5/riverline-challenge.git
 cd riverline-challenge
 ```
 

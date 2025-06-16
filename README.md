@@ -1,58 +1,71 @@
-🚀 Riverline Challenge – Voice Agent Setup
-This guide walks you through the process of setting up and running the voice agent for Challenge_1 using LiveKit and Twilio SIP Trunking.
+# 🚀 Riverline Challenge – Voice Agent Setup
 
-📦 Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/your-repo/riverline-challenge.git
+This repository contains the setup and execution steps for **Challenge\_1**, where we deploy a voice agent using LiveKit and Twilio SIP trunking.
+
+---
+
+## 📆 Clone the Repository
+
+```bash
+git clone https://github.com/your-username/riverline-challenge.git
 cd riverline-challenge
-🛠️ STEP 1: Download LiveKit Server Binary
-Visit the LiveKit GitHub Releases page.
+```
 
-Download the appropriate Windows binary (e.g., livekit-windows-amd64.exe).
+---
 
-Rename it to livekit.exe.
+## 🛠️ STEP 1: Download LiveKit Server Binary
 
-(Optional) Move it to a system PATH directory (e.g., C:\tools\livekit).
+1. Visit the [LiveKit GitHub Releases](https://github.com/livekit/livekit-server/releases) page.
+2. Download the appropriate binary for **Windows**:
 
-To add to PATH:
+   * Example: `livekit-windows-amd64.exe`
+3. Rename it to `livekit.exe`.
 
-Search for Environment Variables in Start Menu.
+### Optional: Add to PATH
 
-Go to System Variables > Path and click Edit.
+* Move `livekit.exe` to a directory like `C:\tools\livekit`.
+* Add the directory to your system `PATH`:
 
-Add: C:\tools\livekit
+  * Search for `Environment Variables` in Start Menu.
+  * Edit System Variables → Path → Add: `C:\tools\livekit`
 
-📚 STEP 2: Install Python Dependencies
-Navigate to the root of the project and run:
+---
 
-bash
-Copy
-Edit
+## 📋 STEP 2: Install Dependencies
+
+Install Python dependencies listed in `requirements.txt`:
+
+```bash
 pip install -r requirements.txt
-🎯 Challenge 1 – Running the Voice Agent
-🔑 Set Up .env.local
-Inside the challenge_1 folder, create a .env.local file with the following:
+```
 
-env
-Copy
-Edit
-LIVEKIT_URL=<Your LiveKit URL>
-LIVEKIT_API_KEY=<Your LiveKit API Key>
-LIVEKIT_API_SECRET=<Your LiveKit API Secret>
-SIP_OUTBOUND_TRUNK_ID=<Generated in Step 2>
-GOOGLE_API_KEY=<Your Gemini API Key>
-DEEPGRAM_API_KEY=<Your Deepgram API Key>
-CARTESIA_API_KEY=<Your Cartesia API Key>
-☎️ STEP 2: Create SIP Trunk in Twilio
-Watch this YouTube guide (Time: 17:53–27:00) to create your SIP trunk in Twilio.
+---
 
-Fill in the outbound-trunk.json file in challenge_1 with your Twilio SIP trunk details:
+## 🎯 Challenge\_1 – Running the Voice Agent
 
-json
-Copy
-Edit
+### 🔧 Configure `.env.local`
+
+Go inside the `challenge_1` folder and create a `.env.local` file:
+
+```env
+LIVEKIT_URL=your_livekit_url
+LIVEKIT_API_KEY=your_livekit_api_key
+LIVEKIT_API_SECRET=your_livekit_api_secret
+SIP_OUTBOUND_TRUNK_ID=your_sip_trunk_id
+GOOGLE_API_KEY=your_gemini_api_key
+DEEPGRAM_API_KEY=your_deepgram_api_key
+CARTESIA_API_KEY=your_cartesia_api_key
+```
+
+---
+
+## ☎️ STEP 3: Create SIP Trunk on Twilio
+
+1. Watch this YouTube guide:
+   📺 [Twilio SIP Setup (17:53–27:00)](https://www.youtube.com/watch?v=1PA1QoRhddw&t=1073s)
+2. Update `outbound-trunk.json` in `challenge_1` folder with Twilio SIP details:
+
+```json
 {
   "name": "YourTrunkName",
   "address": "your-domain.pstn.twilio.com",
@@ -60,31 +73,52 @@ Edit
   "auth_username": "your_username",
   "auth_password": "your_password"
 }
-Generate your SIP Outbound Trunk ID:
+```
 
-bash
-Copy
-Edit
+3. Generate the SIP Outbound Trunk ID:
+
+```bash
 lk sip outbound create outbound-trunk.json
-Copy the generated ID and paste it into SIP_OUTBOUND_TRUNK_ID in .env.local.
+```
 
-▶️ STEP 3: Run the Agent
-Navigate to the challenge_1 directory and run the agent:
+> Copy the output ID and paste it in `.env.local` as `SIP_OUTBOUND_TRUNK_ID`.
 
-bash
-Copy
-Edit
+---
+
+## ▶️ STEP 4: Run the Voice Agent
+
+Run the voice agent by executing:
+
+```bash
 python agent.py dev
-This creates a worker that listens for room creation.
+```
 
-📞 STEP 4: Trigger the Outbound Call
-In a new terminal, navigate to challenge_1 and run:
+This starts the worker process.
 
-bash
-Copy
-Edit
+---
+
+## 📞 STEP 5: Trigger a Call
+
+In a new terminal, run:
+
+```bash
 lk dispatch create --new-room --agent-name outbound-caller --metadata "{\"phone_number\": \"+YourPhoneNumber\"}"
-Your phone should ring, and you'll be able to interact with the voice agent 🎤.
+```
 
-✅ You're Done!
-If all steps are correct, your AI voice agent should call you and start interacting. For troubleshooting, check logs in the console and ensure all API keys are valid.
+Your phone should ring, and the AI voice agent will respond to your input.
+
+---
+
+## ✅ Success
+
+If all steps are configured correctly, your voice agent is live and can interact over the phone. Happy building!
+
+---
+
+## 📌 Notes
+
+* Make sure all API keys are active and valid.
+* Check the terminal logs for errors if something goes wrong.
+* This guide assumes you're using **Windows OS**.
+
+---

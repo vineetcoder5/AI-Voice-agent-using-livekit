@@ -1,5 +1,11 @@
 # ☎️ AI-Voice-agent-using-livekit
 
+This project creates an AI-powered voice agent that can make outbound calls via SIP using LiveKit and Twilio. The agent listens, understands, and responds to the user's voice in real-time.
+
+🏦 In this implementation, the voice agent acts as a debt reminder bot automatically calling bank defaulters to notify them of pending dues.
+
+🛠️ You can easily modify the agent to suit your own use case, such as appointment reminders, customer support, surveys, or automated lead follow-ups.
+
 Setup
 ---
 

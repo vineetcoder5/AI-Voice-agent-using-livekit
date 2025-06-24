@@ -1,6 +1,6 @@
-# 🚀 Riverline Challenge – Voice Agent Setup
+# ☎️ AI-Voice-agent-using-livekit
 
-This repository contains the setup and execution steps for **Challenge\_1** and **Challenge\_2**, 
+Setup
 ---
 
 ## 📆 Clone the Repository
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🎯 Challenge\_1 – Running the Voice Agent
+## 🎯 Running the Voice Agent
 
 ### 🔧 Configure `.env.local`
 
@@ -104,68 +104,9 @@ In a new terminal, run:
 lk dispatch create --new-room --agent-name outbound-caller --metadata "{\"phone_number\": \"+YourPhoneNumber\"}"
 ```
 
-Your phone should ring, and the AI voice agent will respond to your input.
-
----
-
-## 🔄 Challenge\_2 – Self-Correcting Voice Agents
-
-### 🔧 Step 1: Navigate to the Folder
-
-Navigate to the folder:
-
-```bash
-cd challenge_2
-```
-
-> No environment variables are needed for this folder.
-
-### 📂 Files Overview
-
-* `Replicating_conversations.py`: Simulates a conversation between the outbound agent and the defaulter.
-* `persona.py`: Generates a persona for the defaulter.
-* `validate.py`: Evaluates the conversation based on three conditions:
-
-  * Is the bot repeating itself?
-  * Is the bot negotiating enough?
-  * Is the bot providing irrelevant responses?
-* `self_correct.py`: Refines the outbound caller agent prompt based on validation.
-
-### 📅 Step 2: Run the Simulation
-
-Only one script needs to be executed:
-
-```bash
-python Replicating_conversations.py
-```
-
-After you run the code fill the defaulter detail
-
-```bash
-Enter defaulter's name (e.g., Sania Gupta): Defaulter Name
-Enter amount due (e.g., 125.50): Defaulter Amount
-Enter due date (e.g., May 25, 2025): Date of default
-Enter personality traits (e.g., emotional, defensive, anxious): personality traits of the defaulter
-```
-
-> After a successful run, you will get `transcript.json` outside the `challenge_2` folder. This file contains a modified prompt that satisfies the persona requirements in a general way.
-
-### ⚠️ API Key Notes
-
-* If you get an API key error, it's likely due to overload on Gemini API.
-* Do **not** use the same Gemini API key repeatedly.
-* Replace your Gemini API key at the following locations:
-
-  * `Replicating_conversations.py`: Line 105 and 98
-  * `persona.py`: Line 3
-  * `validate.py`: Line 9
-  * `self_correct.py`: Line 7
-
----
-
 ## ✅ Success
 
-If all steps are configured correctly, Challenge\_2 will produce improved prompts that self-correct based on conversation quality.
+Your phone should ring, and the AI voice agent will respond to your input.
 
 ---
 

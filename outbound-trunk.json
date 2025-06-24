@@ -1,0 +1,9 @@
+{
+  "trunk": {
+    "name": "xxx",
+    "address": "xxx",
+    "numbers": ["+xxxx"],
+    "auth_username": "xxx",
+    "auth_password": "xxx"
+  }
+}

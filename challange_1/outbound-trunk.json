@@ -1,9 +1,0 @@
-{
-  "trunk": {
-    "name": "Riverline",
-    "address": "vineet2280.pstn.twilio.com",
-    "numbers": ["+15802603408"],
-    "auth_username": "Vineet2280@@",
-    "auth_password": "Vineet2280@@"
-  }
-}

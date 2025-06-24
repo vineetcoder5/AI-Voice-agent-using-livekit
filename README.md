@@ -6,6 +6,8 @@ This project creates an AI-powered voice agent that can make outbound calls via 
 
 🛠️ You can easily modify the agent to suit your own use case, such as appointment reminders, customer support, surveys, or automated lead follow-ups.
 
+🎧 [Click here to listen to the audio](https://drive.google.com/file/d/1tyeLXJVaIuMsvDvYQM_y1Nd0EE21TJvg/view?usp=drive_link)
+
 Setup
 ---
 
